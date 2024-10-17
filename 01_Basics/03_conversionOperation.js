@@ -34,7 +34,7 @@ console.log(typeof ansInNumber);
  console.log(1+2+"2");//32
  
 
- // + means conversion but + only at first not at last(error ocuured at last if + at last use)
+ // + means conversion but + only works(or converts) at first not at last(error ocuured at last if + at last use)
  console.log(+true); //1
  console.log(+""); //0
  
