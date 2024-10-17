@@ -23,7 +23,7 @@ console.log(undefined==0);//false
 
 //data type
 // (Primitive or call by value)
-//7 types (String,Number,Boolean,Null,Undefined,Symbol,BigInt)
+//7 types (String,Number,Boolean,Null,Undefined,Symbol,BigInt) //type of string is object key value pair store
 // (Reference or Non-Primitive)
 // Array,Object,Functions
 
