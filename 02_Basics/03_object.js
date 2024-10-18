@@ -1,9 +1,9 @@
-//singelton
+//singleton
+//Object.create() => object made by constructor is singleton object
 
 
-
-//literal
-
+// object literals => object made by literals is not singleton object
+//const obj = {}
 const mysym = Symbol('my key');
 const myobj = {
     name: "deepanshu",
