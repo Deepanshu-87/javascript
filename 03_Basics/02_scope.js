@@ -1,20 +1,20 @@
 let a  =300
 
-//local(Block-level) scope
-// {
-//     let a=20;
-//     const b=10;
-//     var c=30;
-//     console.log("Inner: ",a);
+local(Block-level) scope
+{
+    let a=20;
+    const b=10;
+    var c=30;
+    console.log("Inner: ",a);
     
-// }
+}
 
-// console.log(a); //a is not defined
-// console.log(b); //b is not defined
-// console.log(c); //c =30 print(problem)
+console.log(a); //a is not defined
+console.log(b); //b is not defined
+console.log(c); //c =30 print(problem)
 
 
-// console.log(a); //300
+ console.log(a); //300
 
 
 //imp 
