@@ -1,6 +1,6 @@
 let a  =300
 
-local(Block-level) scope
+//local(Block-level) scope
 {
     let a=20;
     const b=10;
