@@ -52,7 +52,7 @@ console.log(fun3(1,2))
 const fun4 = (num1,num2)=> num1+num2 //by default it means return num1+num2
 console.log(fun4(6,7))
 
-const fun5 = (num1,num2)=> (num1+num2)
+const fun5 = (num1,num2)=> (num1+num2) //no need to write return in curly brackers
 console.log(fun4(6,7))  //mostly uses in react 
 
 
