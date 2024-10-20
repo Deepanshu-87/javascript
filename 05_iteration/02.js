@@ -30,7 +30,7 @@ map.set('IN','India')
 map.set('USA','United States Of America')
 map.set('Fr','France')
 
- console.log(map); 
+ //console.log(map); 
 
 // Map(3) {
 //     'IN' => 'India',
@@ -44,15 +44,18 @@ for (const [key,value] of map) {
    //console.log(key," - ",value)
 }
 
+for (const key in map) {
+    console.log(key)  //not work
+}
 
 
 //maps are iteratable (for of work)  but objects pr nhi(for of work)
 
-const myobj = {
-    username:"deepanshu",
-    age:40
-}
+// const myobj = {
+//     username:"deepanshu",
+//     age:40
+// }
 
-for (const [key,value] of myobj) { //not - iteratable
-    console.log(key," - ",value)
-}
+// for (const [key,value] of myobj) { //not - iteratable
+//     console.log(key," - ",value)
+// }
