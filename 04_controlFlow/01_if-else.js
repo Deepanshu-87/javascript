@@ -17,49 +17,49 @@
 
 //switch
 
-// const month =3
-// switch (month) {
-//     case 1:
-//         console.log('jan')
-//         break;
-//     case 2:
-//         console.log('feb')
-//         break;
-//     case 3:
-//         console.log('mar')
-//         break;
-//     case 4:
-//         console.log('april')
-//         break;
-    
-//     default:
-//         console.log('please enter a month')
-// }
-
-
-//without break it render all code except default code 
-
-
-
-
-const month ="jan"
+const month =3
 switch (month) {
-    case "jan":
-        console.log(1)
+    case 1:
+        console.log('jan')
         break;
-    case "feb":
-        console.log(2)
+    case 2:
+        console.log('feb')
         break;
-    case "mar":
-        console.log(3)
+    case 3:
+        console.log('mar')
         break;
-    case "april":
-        console.log(4)
+    case 4:
+        console.log('april')
         break;
     
     default:
         console.log('please enter a month')
 }
+
+
+
+
+
+
+
+// const month ="jan"
+// switch (month) {
+//     case "jan":
+//         console.log(1)
+//         break;
+//     case "feb":
+//         console.log(2)
+//         break;
+//     case "mar":
+//         console.log(3)
+//         break;
+//     case "april":
+//         console.log(4)
+//         break;
+    
+//     default:
+//         console.log('please enter a month')
+// }
 
 
 
