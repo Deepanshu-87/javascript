@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .body{
+        background-color: black;
+        color:white;
+    }
+</style>
+<body class="body">
+    
+</body>
+ <script>
+    //create your html element
+    const div = document.createElement('div')
+    div.innerText="this is a div container"
+    // const addText = document.createTextNode('this is a div container')
+    // div.appendChild(addText)
+    div.className="container"
+    div.id="heading"
+    div.setAttribute("title","title-text")
+    div.style.backgroundColor='green'
+    div.style.padding='20px'
+    document.body.appendChild(div) //for showing in browser
+    console.log(div)
+ </script>
+</html>
