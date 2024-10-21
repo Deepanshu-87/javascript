@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .body{
+        background-color: black;
+        color:white;
+    }
+</style>
+<body class="body">
+  <ul class="list-item">
+    <li>javascript</li>
+  </ul>  
+</body>
+  <script>
+    //adding one list item (select the parent and then appendChild )
+    //  const parent = document.querySelector('.list-item')
+    // const li = document.createElement('li')
+    // li.innerText="css"
+    // parent.appendChild(li)
+    // console.log(li)
+
+     
+    //  function addingListItem(text){
+    //     let li = document.createElement('li')
+    //     li.innerHTML=text
+    //     document.querySelector('.list-item').appendChild(li)
+    //  }
+
+    //however innerHtml approach is not-efficient becuase every time you traverse the whole tree and then append
+    // so use appendchild instead of this
+
+     
+     function addingListItem(langName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.list-item').appendChild(li)
+     }
+
+     addingListItem('css')
+     addingListItem('py')
+     addingListItem('cpp')
+
+
+
+  //edit
+
+   const secondlang = document.querySelector("li:nth-child(2)") //refernce of li is copy in secondlang
+   console.log(secondlang)
+   
+  // secondlang.innerHTML="mojo"
+   console.log(secondlang);
+   
+   //efficient-way(we replace whole li)
+
+   const newli = document.createElement('li')
+   newli.textContent='mojo'
+   secondlang.replaceWith(newli)
+
+    //another way
+
+    const firstLang = document.querySelector("li:nth-child(1)") //or ("li:first-child")
+    firstLang.outerHTML='<li>TYPESCRIPT</li>'
+
+   //remove
+   const lastLang = document.querySelector('li:last-child')
+   lastLang.remove()
+
+  </script>
+</html>
