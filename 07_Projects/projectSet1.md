@@ -6,7 +6,7 @@
 
 # solution code
 
-## project 1
+## project 1 code
 
 ```javascript
 const btn = document.querySelectorAll('.button');
@@ -32,7 +32,7 @@ btn.forEach((button) => {
 ```
 
 
-## project 2 solution
+## project 2 code
 
 ```javascript
 
@@ -58,3 +58,20 @@ const weightGuide = document.querySelector('#weight-guide')
   }
 
 ```
+
+
+### project 3 code
+
+```javascript
+
+const clock = document.querySelector('#clock')
+setInterval(()=>{
+  const date = new Date();
+  clock.innerHTML=date.toLocaleTimeString()
+},1000)
+
+
+
+
+```
+
