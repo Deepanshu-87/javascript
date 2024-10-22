@@ -8,7 +8,8 @@ console.log(mydate.toLocaleString());
 
 console.log(new Date('01-09-2024').toDateString());
 
-
+date.toLocaleTimeString() //for local time
+date.toLocaleDateString() //for local date 
 
 let myTimeStamp = Date.now(); //give no of milisecond of current date sine 1970 1st jan(change as time increases)
 console.log(myTimeStamp); 
