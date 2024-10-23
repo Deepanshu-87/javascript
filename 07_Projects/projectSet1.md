@@ -36,7 +36,24 @@ btn.forEach((button) => {
 
 ```javascript
 
-const weightGuide = document.querySelector('#weight-guide')
+// weight(in kg)/height in m*2
+
+const form = document.querySelector('form')
+form.addEventListener('submit',(e)=>{
+  e.preventDefault()
+  const height = parseInt(document.querySelector('#height').value);
+  const weight = parseInt(document.querySelector('#weight').value);
+  const result = document.querySelector('#results')
+  if(height===''||height<0||isNaN(height)){
+    result.innerHTML=`pls give a valid height ${height}`
+  }else if(weight===''|| weight<0 || isNaN(weight)){
+    result.innerHTML=`pls give a valid weight ${weight}`
+  }
+  else{
+    const bmi = (weight/((height*0.01)*(height*0.01))).toFixed(2)
+    result.innerHTML=`<span>${bmi}</span>`
+
+    const weightGuide = document.querySelector('#weight-guide')
   const child2 = weightGuide.children[2]
   const child1= weightGuide.children[1]
   const child3= weightGuide.children[3]
@@ -56,6 +73,9 @@ const weightGuide = document.querySelector('#weight-guide')
   child1.remove()
   child2.remove();
   }
+  }
+})
+
 
 ```
 
