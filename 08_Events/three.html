@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black;color:white;">
+    <h1>This is a Github Account</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    //basic setInterval syntax
+//     const text = function(str){
+//        console.log(str,Date.now()
+//        )
+//     }
+//    const reference= setInterval(text,1000,'hii') //third argument also pass in setInterval
+
+//    clearInterval(reference)
+
+    const fun = function(){
+        console.log('hi')
+     }
+    let reference; //scope
+    document.querySelector('#start').addEventListener('click',(e)=>{
+    reference=setInterval(fun,1000)
+   })
+
+   document.querySelector('#stop').addEventListener('click',(e)=>{
+    //console.log(reference)
+      clearInterval(reference)
+   })
+
+</script>
+</html>
