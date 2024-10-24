@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+
+<script>
+    // document.getElementById('owl').onclick=function(){
+    //     alert('owl is clicked')
+    // }
+
+   
+     //attachEvent()
+     //jQuery -> on
+
+     //few events to practice
+      // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    //  document.getElementById('owl').addEventListener('click',(e)=>{
+    //     //alert('owl')
+    //     //console.log(e)
+    //     const time = e.timeStamp
+    //     console.log((time*0.001).toFixed(2))
+    //  },false)
+
+
+
+     //event propagation
+ 
+      //addEventListener(event,function,useCapture)
+      // default value = false-> bubbling activate
+      // true-> capturing activate
+
+    //   document.getElementById('images').addEventListener('click',(e)=>{
+    //     console.log('images button clicked')
+    //   },false)
+
+    //   document.getElementById('owl').addEventListener('click',(e)=>{
+     
+    //     console.log('owl image clicked')
+        
+    //  },false)
+
+
+
+     //when you click on owl image, then bubble create means it print ouput bottom to top, just like a bubble
+     //but even bubbling happen only when you gave third parameter as false
+
+      //eventBubbling-> event starts at most specific element(starts at most inner element)
+      //eventCapturing-> event starts at the least specific elements(starts at upper element)
+
+     //if you gave third parameter as true, then event capturing started(just opposite to event bubbling)
+
+
+
+
+
+
+     //stop propagation
+
+    //  document.getElementById('images').addEventListener('click',(e)=>{
+    //     console.log('images button clicked')
+    //   },false)
+
+    //   document.getElementById('owl').addEventListener('click',(e)=>{
+     
+    //     console.log('owl image clicked')
+    //    // e.stopPropagation() //it means event not bubble further to top 
+        
+    //   },false)
+
+    //  //preventDefault
+    //  document.querySelector('#google').addEventListener('click',(e)=>{
+    //     e.preventDefault()
+    //     console.log('google clicked')
+    //     e.stopPropagation()
+    //  },false)
+
+
+ 
+    
+    //project 
+    
+    document.querySelector('#images').addEventListener('click',(e)=>{
+        // console.log(e.target.tagName)
+        if(e.target.tagName==='IMG')  //because when you click on list item so its parent is ul and whole ul remove
+         {
+            console.log(e.target.tagName)
+            Removedtarget = e.target.parentNode  //img parent li stored
+            Removedtarget.remove()
+         }
+        
+
+    })
+     
+ 
+
+
+</script>
+
+
+</html>
