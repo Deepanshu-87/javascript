@@ -195,4 +195,68 @@ function startOver() {
 
 
 ```
+### project 5 code
+
+```javascript
+
+const insert = document.getElementById('insert');
+window.addEventListener('keydown',(e)=>{
+  insert.innerHTML=`<div>
+  <table>
+   <tr>
+     <td>key</td>
+     <td>keyCode</td>
+     <td>hexCode</td>
+   </tr>
+   <tr>
+   <td>${e.key===' '?'Space':e.key}</td>
+   <td>${e.keyCode}</td>
+   <td>${e.code}</td>
+   
+ </tr>
+  </table>
+  <div>`
+})
+
+
+
+
+```
+
+### project 6 code
+
+```javascript
+
+//generate random color
+function generateHexColor(){
+  let hex='0123456789ABCDEF'
+  let color = '#'
+  for(i=0;i<6;i++)
+   {
+     color+=hex[Math.floor(Math.random()*16)];
+   }
+   return color;
+}
+function displayColor(){
+  color = generateHexColor()
+  document.body.style.backgroundColor=color;
+}
+let reference;
+document.getElementById('start').addEventListener('click',(e)=>{
+  if(!reference){ //if reference is null then call setInterval
+    reference=setInterval(displayColor,1000)
+  }
+ 
+})
+
+document.getElementById('stop').addEventListener('click',(e)=>{
+  clearInterval(reference)
+  reference=null //memory utilisation
+})
+
+
+
+
+
+```
 
