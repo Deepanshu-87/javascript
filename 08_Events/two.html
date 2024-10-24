@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black;color:white;">
+    <h1>This is a Github Account</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    //basic setTimeout
+    // const text = function(){
+    //     console.log('deepanshu')
+    // }
+    // setTimeout(text,2000)
+  
+    const h1 = function(){document.querySelector('h1').innerHTML='this is a best js repo'}
+
+     const reference = setTimeout(h1,2000)
+   //  clearTimeout(changeMe) //in clearTimeout reference of setTimeout is passed (it clear the queue)
+
+    //applying clearTimeout on button click
+      document.querySelector('#stop').addEventListener('click',(e)=>{
+         clearTimeout(reference);
+        console.log('stopped')
+      })
+
+
+</script>
+</html>
