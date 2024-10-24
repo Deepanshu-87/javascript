@@ -20,9 +20,9 @@
 </body>
 
 <script>
-    // document.getElementById('owl').onclick=function(){
-    //     alert('owl is clicked')
-    // }
+    document.getElementById('owl').onclick=function(){
+        alert('owl is clicked')
+    }
 
    
      //attachEvent()
@@ -34,30 +34,30 @@
     // clientX, clientY, screenX, screenY
     // altkey, ctrlkey, shiftkey, keyCode
 
-    //  document.getElementById('owl').addEventListener('click',(e)=>{
-    //     //alert('owl')
-    //     //console.log(e)
-    //     const time = e.timeStamp
-    //     console.log((time*0.001).toFixed(2))
-    //  },false)
+     document.getElementById('owl').addEventListener('click',(e)=>{
+        //alert('owl')
+        //console.log(e)
+        const time = e.timeStamp
+        console.log((time*0.001).toFixed(2))
+     },false)
 
 
 
      //event propagation
  
-      //addEventListener(event,function,useCapture)
-      // default value = false-> bubbling activate
-      // true-> capturing activate
+      addEventListener(event,function,useCapture)
+      default value = false-> bubbling activate
+      true-> capturing activate
 
-    //   document.getElementById('images').addEventListener('click',(e)=>{
-    //     console.log('images button clicked')
-    //   },false)
+      document.getElementById('images').addEventListener('click',(e)=>{
+        console.log('images button clicked')
+      },false)
 
-    //   document.getElementById('owl').addEventListener('click',(e)=>{
+      document.getElementById('owl').addEventListener('click',(e)=>{
      
-    //     console.log('owl image clicked')
+        console.log('owl image clicked')
         
-    //  },false)
+     },false)
 
 
 
@@ -76,24 +76,24 @@
 
      //stop propagation
 
-    //  document.getElementById('images').addEventListener('click',(e)=>{
-    //     console.log('images button clicked')
-    //   },false)
+     document.getElementById('images').addEventListener('click',(e)=>{
+        console.log('images button clicked')
+      },false)
 
-    //   document.getElementById('owl').addEventListener('click',(e)=>{
+      document.getElementById('owl').addEventListener('click',(e)=>{
      
-    //     console.log('owl image clicked')
-    //    // e.stopPropagation() //it means event not bubble further to top 
+        console.log('owl image clicked')
+       // e.stopPropagation() //it means event not bubble further to top 
         
-    //   },false)
+      },false)
 
-    //  //preventDefault
-    
-    //  document.querySelector('#google').addEventListener('click',(e)=>{
-    //     e.preventDefault()
-    //     console.log('google clicked')
-    //     e.stopPropagation()
-    //  },false)
+     //preventDefault
+
+     document.querySelector('#google').addEventListener('click',(e)=>{
+        e.preventDefault()
+        console.log('google clicked')
+        e.stopPropagation()
+     },false)
 
 
  
